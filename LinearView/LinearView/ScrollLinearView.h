@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LinearView.h"
 
-@interface ScrollLinearView : UIView
-
+//依赖LinearView
+@interface ScrollLinearView : UIScrollView
+@property(nonatomic,assign)LinearViewOrientation orientation;
+-(void)addSubview:(UIView *)view;
+-(void)addSubview:(UIView *)view margin:(CGFloat)margin;
 @end

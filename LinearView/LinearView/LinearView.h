@@ -15,6 +15,7 @@ typedef NS_ENUM(NSUInteger, LinearViewOrientation) {
 
 @interface LinearView : UIView
 @property(nonatomic,assign)LinearViewOrientation orientation;
+-(void)addSubview:(UIView *)view;
 -(void)addSubview:(UIView *)view margin:(CGFloat)margin;
 -(CGSize)getContentSize;
 @end

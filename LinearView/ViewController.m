@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "LinearView.h"
+#import "ScrollLinearView.h"
 
 @interface ViewController ()
 
@@ -58,6 +59,30 @@
     [linearView2 addSubview:view22 margin:20];
     [linearView2 addSubview:view33 margin:10];
     [linearView2 addSubview:view44 margin:10];
+    
+    
+    
+#pragma mark - scrollLinearView;
+    
+    
+    ScrollLinearView *scrollLinearView = [[ScrollLinearView alloc] initWithFrame:CGRectMake(0, 350, self.view.frame.size.width, 350)];
+    [self.view addSubview:scrollLinearView];
+    
+    UIView *sview1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 50)];
+    UIView *sview2 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 120)];
+    UIView *sview3 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100)];
+    UIView *sview4 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 80)];
+    
+    sview1.backgroundColor = [UIColor lightGrayColor];
+    sview2.backgroundColor = [UIColor blueColor];
+    sview3.backgroundColor = [UIColor redColor];
+    sview4.backgroundColor = [UIColor grayColor];
+    
+    [scrollLinearView addSubview:sview1 margin:10];
+    [scrollLinearView addSubview:sview2 margin:10];
+    [scrollLinearView addSubview:sview3 margin:15];
+    [scrollLinearView addSubview:sview4 margin:2];
+    
 }
 
 
